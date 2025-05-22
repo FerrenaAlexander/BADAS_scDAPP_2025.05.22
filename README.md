@@ -5,9 +5,12 @@ Guide for [scDAPP](https://github.com/bioinfoDZ/scDAPP) for the Bioinformatics a
 
 ## 1. Example data and download instructions
 
-Navigate to the [example data repo](https://github.com/FerrenaAlexander/scDAPP_example_data).
+We prepared some example data: [see the relevant repository for details](https://github.com/FerrenaAlexander/scDAPP_example_data).
 
-Navigate to a folder of your choice before downloading.
+Navigate to a folder of your choice before downloading. Then, to download:
+```
+git clone https://github.com/FerrenaAlexander/scDAPP_example_data.git
+```
 
 The data is about 284Mb in size. The test will leave a folder with ~2.2Gb output.
 
