@@ -12,29 +12,22 @@
 
 module purge
 
+export OUTDIR="${SCRATCH}/scDAPP.badas"
+export DATASET="/scratch/work/cgsb/badas/scDAPP/scDAPP_example_data/TestCovidDataset"
+export SIF="/scratch/work/cgsb/badas/scDAPP/scDAPP.sif"
 
+mkdir -p ${OUTDIR}
 
-# Path to the executable .sif container
-SIF=/scratch/work/cgsb/badas/scDAPP/scDAPP.sif
-
-### Launch the Pipeline ###
-# Launch the R command in batch format as a single big string below.
-# you may need to update the projdir folder based on where you have downloaded the example data.
-# because it is a big double quotes string, make sure any arguments you pass use 'single quotes'.
-
-
-$SIF Rscript --vanilla -e "
-
+${SIF} Rscript --vanilla -e "
 #can use this to easily run pipeline to current directory
-projdir = '$SCRATCH/scDAPP/scDAPP_example_data/TestCovidDataset'
+projdir = Sys.getenv('DATASET')
 
 #Run pipeline with options
 scDAPP::scRNAseq_pipeline_runner(
   datadir = paste0(projdir, '/datadir/'),
-  outdir = paste0(projdir, '/outs/TESTRUN/'),
+  outdir = paste0(Sys.getenv('OUTDIR'), '/outs/TESTRUN/'),
   sample_metadata = paste0(projdir, '/sample_metadata.csv'),
   comps = paste0(projdir, '/comps.csv'),
-  
   Pseudobulk_mode = T, #set to F if no replicates
 
   use_labeltransfer = T,
