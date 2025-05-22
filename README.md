@@ -28,7 +28,22 @@ sbatch scdapp_runner.sh
 ```
 
 
-For your conveninece, the `scdapp_runner.sh` script is also pasted below.
+For your conveninece, the `scdapp_runner.sh` script is also pasted at the bottom of this page.
+
+
+<br />
+
+## 3. Check the output.
+
+For the session, we will look through a pre-run output. Please download from this google drive link:
+[Drive Link](https://drive.google.com/file/d/1IqPFNoMvYIYTltIfUKQCAo_0umM0BjJl/view?usp=sharing)
+
+The download button should look like a downward arrow at the top right.
+
+
+<br />
+
+## scdapp_runner.sh
 
 ```
 #!/bin/bash -e
